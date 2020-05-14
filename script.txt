@@ -1,0 +1,20 @@
+function onEdit(e) {
+  
+  var ActiveSheet = SpreadsheetApp.getActiveSheet();
+  var ActiveRow = ActiveSheet.getActiveRange().getRow();
+  var ActiveCell = ActiveSheet.getActiveCell();
+  var email = Session.getEffectiveUser().getEmail();
+  var contents = e.oldValue
+  
+    if (email == "user1@example.com"){
+      ActiveCell.setFontColor("#9900ff");
+    }
+    
+    if (email == "user2@example.com"){
+      ActiveCell.setFontColor("#0000ff");
+    }
+    
+    if (email == "user3@example.com"){
+      ActiveCell.setFontColor("#ff0000");
+    }
+}
